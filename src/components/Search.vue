@@ -45,7 +45,7 @@ export default {
                 },
                 {
                     name: 'number',
-                    items:[10, 20, 30]
+                    items:[10, 20, 30, 50, 100]
                 },
                 {
                     name: 'year',
@@ -76,22 +76,22 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    .container {
+.container {
+    display: flex;
+    gap: 10px;
+    > * {font-size: 15px;}
+    .selects {
         display: flex;
-        gap: 10px;
-        > * {font-size: 15px;}
-        .selects {
-            display: flex;
-            gap: 0 10px;
-            select {
-                width: 120px;
-            }
-        }
-        .btn {
+        gap: 0 10px;
+        select {
             width: 120px;
-            height: 50px;
-            font-weight: 700;
-            flex-shrink: 0;
         }
     }
+    .btn {
+        width: 120px;
+        height: 50px;
+        font-weight: 700;
+        flex-shrink: 0;
+    }
+}
 </style>
